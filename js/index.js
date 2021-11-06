@@ -32,8 +32,8 @@ function FormatContent(unformattedContent){
         startIndex = i+startMarker.length;
         endIndex  = endIndices[startIndices.indexOf(i)];
 
-        console.log(startIndex);
-        console.log(endIndex);
+        // console.log(startIndex);
+        // console.log(endIndex);
 
         var post = str.substring(startIndex,endIndex)
         posts.push(post)
@@ -43,7 +43,7 @@ function FormatContent(unformattedContent){
 }
 
 function main(){
-    var toLoad = document.getElementById("loaded")
+    
     //trust me I tried to load it from a text file directly, I TRIED SO HARD AND GOT SO FAR
     //IN THE END STACKOVERFLOW TOLD ME TO MAKE A WHOLE SERVER SIDE >:|
     //just collapse this part if you're working on it for your own sanity
@@ -88,9 +88,9 @@ Duis in mi eget lectus accumsan pulvinar.$->
 LMFAO THIS ACTUALLY WORKED AHAHAHAH$->
 `
     var formattedContent = FormatContent(blogContent)    
-
+    var toLoad = document.getElementsByClassName("blogPart")[0]
     for(x of formattedContent){ //change this into a blog posts class and ID it according to title/date 
-        toLoad.innerHTML += x+"<br><br>";
+        toLoad.innerHTML += `<p class = "Loaded">${x}</p><br><br>`;
     }
     
 }
