@@ -1,5 +1,7 @@
-#content{
+#Loaded{
     align-content: justify;
+    overflow: hidden;
+    scroll-margin-inline: yes;
     text-align: center;
     color: white;
     padding-left: 50px;
@@ -7,5 +9,5 @@
     font-size: larger;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
     font-style: italic;
-    word-break: break-all; 
+    word-break: break-all;   
 }
