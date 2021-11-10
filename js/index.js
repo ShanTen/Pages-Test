@@ -27,6 +27,8 @@ function FormatContent(unformattedContent){
     var endIndices = getIndicesOf(endMarker,str,false);
 
     let posts = [];
+    let titles = []
+    let dates = [];
 
     for(i of startIndices) {
         startIndex = i+startMarker.length;
@@ -40,6 +42,21 @@ function FormatContent(unformattedContent){
     }
     
     return posts;
+}
+
+function getDate(){
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    today = dd + '/' + mm + '/' + yyyy;
+    return today
+}
+
+class BlogPost{
+    title = "";
+    content = "";
+    dateTime = undefined;
 }
 
 function main(){
@@ -86,6 +103,108 @@ Duis in mi eget lectus accumsan pulvinar.$->
 
 <-$<b><u>Blog 3</u></b><br>
 LMFAO THIS ACTUALLY WORKED AHAHAHAH$->
+
+<-$<b><u>Blog 2</u></b><br>
+Vestibulum tempor rhoncus tempus
+Curabitur vitae massa pretium, ullamcorper risus quis, dignissim nunc
+Quisque elit ligula, congue nec luctus vitae, sollicitudin at turpis
+Nam volutpat urna risus, id rutrum ex dapibus nec
+Nam quis justo malesuada, imperdiet augue nec, consectetur quam
+Mauris sed justo a felis egestas ultrices vitae ac massa
+Donec vehicula ligula consectetur erat vulputate, vel maximus mi finibus
+Suspendisse quis velit ut leo auctor rhoncus non non libero
+Curabitur fringilla ex id eleifend congue
+Quisque eleifend dictum consequat
+Nam venenatis lacinia nibh nec venenatis
+Morbi non ullamcorper dui, ac molestie arcu
+Sed pellentesque nisl a arcu volutpat, vel tincidunt dui vehicula
+Praesent in quam ante
+Duis in mi eget lectus accumsan pulvinar.$->
+
+<-$<b><u>Blog 2</u></b><br>
+Vestibulum tempor rhoncus tempus
+Curabitur vitae massa pretium, ullamcorper risus quis, dignissim nunc
+Quisque elit ligula, congue nec luctus vitae, sollicitudin at turpis
+Nam volutpat urna risus, id rutrum ex dapibus nec
+Nam quis justo malesuada, imperdiet augue nec, consectetur quam
+Mauris sed justo a felis egestas ultrices vitae ac massa
+Donec vehicula ligula consectetur erat vulputate, vel maximus mi finibus
+Suspendisse quis velit ut leo auctor rhoncus non non libero
+Curabitur fringilla ex id eleifend congue
+Quisque eleifend dictum consequat
+Nam venenatis lacinia nibh nec venenatis
+Morbi non ullamcorper dui, ac molestie arcu
+Sed pellentesque nisl a arcu volutpat, vel tincidunt dui vehicula
+Praesent in quam ante
+Duis in mi eget lectus accumsan pulvinar.$->
+
+<-$<b><u>Blog 2</u></b><br>
+Vestibulum tempor rhoncus tempus
+Curabitur vitae massa pretium, ullamcorper risus quis, dignissim nunc
+Quisque elit ligula, congue nec luctus vitae, sollicitudin at turpis
+Nam volutpat urna risus, id rutrum ex dapibus nec
+Nam quis justo malesuada, imperdiet augue nec, consectetur quam
+Mauris sed justo a felis egestas ultrices vitae ac massa
+Donec vehicula ligula consectetur erat vulputate, vel maximus mi finibus
+Suspendisse quis velit ut leo auctor rhoncus non non libero
+Curabitur fringilla ex id eleifend congue
+Quisque eleifend dictum consequat
+Nam venenatis lacinia nibh nec venenatis
+Morbi non ullamcorper dui, ac molestie arcu
+Sed pellentesque nisl a arcu volutpat, vel tincidunt dui vehicula
+Praesent in quam ante
+Duis in mi eget lectus accumsan pulvinar.$->
+
+<-$<b><u>Blog 2</u></b><br>
+Vestibulum tempor rhoncus tempus
+Curabitur vitae massa pretium, ullamcorper risus quis, dignissim nunc
+Quisque elit ligula, congue nec luctus vitae, sollicitudin at turpis
+Nam volutpat urna risus, id rutrum ex dapibus nec
+Nam quis justo malesuada, imperdiet augue nec, consectetur quam
+Mauris sed justo a felis egestas ultrices vitae ac massa
+Donec vehicula ligula consectetur erat vulputate, vel maximus mi finibus
+Suspendisse quis velit ut leo auctor rhoncus non non libero
+Curabitur fringilla ex id eleifend congue
+Quisque eleifend dictum consequat
+Nam venenatis lacinia nibh nec venenatis
+Morbi non ullamcorper dui, ac molestie arcu
+Sed pellentesque nisl a arcu volutpat, vel tincidunt dui vehicula
+Praesent in quam ante
+Duis in mi eget lectus accumsan pulvinar.$->
+
+<-$<b><u>Blog 2</u></b><br>
+Vestibulum tempor rhoncus tempus
+Curabitur vitae massa pretium, ullamcorper risus quis, dignissim nunc
+Quisque elit ligula, congue nec luctus vitae, sollicitudin at turpis
+Nam volutpat urna risus, id rutrum ex dapibus nec
+Nam quis justo malesuada, imperdiet augue nec, consectetur quam
+Mauris sed justo a felis egestas ultrices vitae ac massa
+Donec vehicula ligula consectetur erat vulputate, vel maximus mi finibus
+Suspendisse quis velit ut leo auctor rhoncus non non libero
+Curabitur fringilla ex id eleifend congue
+Quisque eleifend dictum consequat
+Nam venenatis lacinia nibh nec venenatis
+Morbi non ullamcorper dui, ac molestie arcu
+Sed pellentesque nisl a arcu volutpat, vel tincidunt dui vehicula
+Praesent in quam ante
+Duis in mi eget lectus accumsan pulvinar.$->
+
+<-$<b><u>Blog 2</u></b><br>
+Vestibulum tempor rhoncus tempus
+Curabitur vitae massa pretium, ullamcorper risus quis, dignissim nunc
+Quisque elit ligula, congue nec luctus vitae, sollicitudin at turpis
+Nam volutpat urna risus, id rutrum ex dapibus nec
+Nam quis justo malesuada, imperdiet augue nec, consectetur quam
+Mauris sed justo a felis egestas ultrices vitae ac massa
+Donec vehicula ligula consectetur erat vulputate, vel maximus mi finibus
+Suspendisse quis velit ut leo auctor rhoncus non non libero
+Curabitur fringilla ex id eleifend congue
+Quisque eleifend dictum consequat
+Nam venenatis lacinia nibh nec venenatis
+Morbi non ullamcorper dui, ac molestie arcu
+Sed pellentesque nisl a arcu volutpat, vel tincidunt dui vehicula
+Praesent in quam ante
+Duis in mi eget lectus accumsan pulvinar.$->
 `
     var formattedContent = FormatContent(blogContent)    
     var toLoad = document.getElementsByClassName("blogPart")[0]
