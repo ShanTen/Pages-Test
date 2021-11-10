@@ -65,7 +65,7 @@ function main(){
     //IN THE END STACKOVERFLOW TOLD ME TO MAKE A WHOLE SERVER SIDE >:|
     //just collapse this part if you're working on it for your own sanity
     var blogContent =  ` 
-<-$<b><u>Blog 1</u></b><br>
+<-$<div id="1" class="post"><b><u>Blog 1</u></b><br>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit
 Suspendisse posuere ipsum in odio pharetra, non sodales eros rhoncus
 Proin tempor ante libero, sed aliquam justo hendrerit quis
@@ -82,9 +82,9 @@ Maecenas vel nunc auctor, aliquet ligula nec, gravida sapien
 Vivamus tristique arcu et lectus dapibus, in condimentum nisl ullamcorper
 Nulla eget augue ullamcorper, sagittis purus quis, cursus mauris
 Curabitur at arcu id urna porttitor sollicitudin
-Mauris cursus finibus eleifend.$->
+Mauris cursus finibus eleifend.</div>$->
 
-<-$<b><u>Blog 2</u></b><br>
+<-$<div id="2" class="post"><b><u>Blog 2</u></b><br>
 Vestibulum tempor rhoncus tempus
 Curabitur vitae massa pretium, ullamcorper risus quis, dignissim nunc
 Quisque elit ligula, congue nec luctus vitae, sollicitudin at turpis
@@ -99,12 +99,9 @@ Nam venenatis lacinia nibh nec venenatis
 Morbi non ullamcorper dui, ac molestie arcu
 Sed pellentesque nisl a arcu volutpat, vel tincidunt dui vehicula
 Praesent in quam ante
-Duis in mi eget lectus accumsan pulvinar.$->
+Duis in mi eget lectus accumsan pulvinar.</div>$->
 
-<-$<b><u>Blog 3</u></b><br>
-LMFAO THIS ACTUALLY WORKED AHAHAHAH$->
-
-<-$<b><u>Blog 2</u></b><br>
+<-$<div id="3" class="post"><b><u>Blog 3</u></b><br>
 Vestibulum tempor rhoncus tempus
 Curabitur vitae massa pretium, ullamcorper risus quis, dignissim nunc
 Quisque elit ligula, congue nec luctus vitae, sollicitudin at turpis
@@ -119,9 +116,13 @@ Nam venenatis lacinia nibh nec venenatis
 Morbi non ullamcorper dui, ac molestie arcu
 Sed pellentesque nisl a arcu volutpat, vel tincidunt dui vehicula
 Praesent in quam ante
-Duis in mi eget lectus accumsan pulvinar.$->
+Duis in mi eget lectus accumsan pulvinar.</div>$->
 
-<-$<b><u>Blog 2</u></b><br>
+<-$<div id="4" class="post"><b><u>Blog 4</u></b><br>
+LMFAO THIS ACTUALLY WORKED AHAHAHAH</div>$->
+
+
+<-$<div id="5" class="post"><b><u>Blog 5</u></b><br>
 Vestibulum tempor rhoncus tempus
 Curabitur vitae massa pretium, ullamcorper risus quis, dignissim nunc
 Quisque elit ligula, congue nec luctus vitae, sollicitudin at turpis
@@ -136,75 +137,10 @@ Nam venenatis lacinia nibh nec venenatis
 Morbi non ullamcorper dui, ac molestie arcu
 Sed pellentesque nisl a arcu volutpat, vel tincidunt dui vehicula
 Praesent in quam ante
-Duis in mi eget lectus accumsan pulvinar.$->
+Duis in mi eget lectus accumsan pulvinar.</div>$->
 
-<-$<b><u>Blog 2</u></b><br>
-Vestibulum tempor rhoncus tempus
-Curabitur vitae massa pretium, ullamcorper risus quis, dignissim nunc
-Quisque elit ligula, congue nec luctus vitae, sollicitudin at turpis
-Nam volutpat urna risus, id rutrum ex dapibus nec
-Nam quis justo malesuada, imperdiet augue nec, consectetur quam
-Mauris sed justo a felis egestas ultrices vitae ac massa
-Donec vehicula ligula consectetur erat vulputate, vel maximus mi finibus
-Suspendisse quis velit ut leo auctor rhoncus non non libero
-Curabitur fringilla ex id eleifend congue
-Quisque eleifend dictum consequat
-Nam venenatis lacinia nibh nec venenatis
-Morbi non ullamcorper dui, ac molestie arcu
-Sed pellentesque nisl a arcu volutpat, vel tincidunt dui vehicula
-Praesent in quam ante
-Duis in mi eget lectus accumsan pulvinar.$->
-
-<-$<b><u>Blog 2</u></b><br>
-Vestibulum tempor rhoncus tempus
-Curabitur vitae massa pretium, ullamcorper risus quis, dignissim nunc
-Quisque elit ligula, congue nec luctus vitae, sollicitudin at turpis
-Nam volutpat urna risus, id rutrum ex dapibus nec
-Nam quis justo malesuada, imperdiet augue nec, consectetur quam
-Mauris sed justo a felis egestas ultrices vitae ac massa
-Donec vehicula ligula consectetur erat vulputate, vel maximus mi finibus
-Suspendisse quis velit ut leo auctor rhoncus non non libero
-Curabitur fringilla ex id eleifend congue
-Quisque eleifend dictum consequat
-Nam venenatis lacinia nibh nec venenatis
-Morbi non ullamcorper dui, ac molestie arcu
-Sed pellentesque nisl a arcu volutpat, vel tincidunt dui vehicula
-Praesent in quam ante
-Duis in mi eget lectus accumsan pulvinar.$->
-
-<-$<b><u>Blog 2</u></b><br>
-Vestibulum tempor rhoncus tempus
-Curabitur vitae massa pretium, ullamcorper risus quis, dignissim nunc
-Quisque elit ligula, congue nec luctus vitae, sollicitudin at turpis
-Nam volutpat urna risus, id rutrum ex dapibus nec
-Nam quis justo malesuada, imperdiet augue nec, consectetur quam
-Mauris sed justo a felis egestas ultrices vitae ac massa
-Donec vehicula ligula consectetur erat vulputate, vel maximus mi finibus
-Suspendisse quis velit ut leo auctor rhoncus non non libero
-Curabitur fringilla ex id eleifend congue
-Quisque eleifend dictum consequat
-Nam venenatis lacinia nibh nec venenatis
-Morbi non ullamcorper dui, ac molestie arcu
-Sed pellentesque nisl a arcu volutpat, vel tincidunt dui vehicula
-Praesent in quam ante
-Duis in mi eget lectus accumsan pulvinar.$->
-
-<-$<b><u>Blog 2</u></b><br>
-Vestibulum tempor rhoncus tempus
-Curabitur vitae massa pretium, ullamcorper risus quis, dignissim nunc
-Quisque elit ligula, congue nec luctus vitae, sollicitudin at turpis
-Nam volutpat urna risus, id rutrum ex dapibus nec
-Nam quis justo malesuada, imperdiet augue nec, consectetur quam
-Mauris sed justo a felis egestas ultrices vitae ac massa
-Donec vehicula ligula consectetur erat vulputate, vel maximus mi finibus
-Suspendisse quis velit ut leo auctor rhoncus non non libero
-Curabitur fringilla ex id eleifend congue
-Quisque eleifend dictum consequat
-Nam venenatis lacinia nibh nec venenatis
-Morbi non ullamcorper dui, ac molestie arcu
-Sed pellentesque nisl a arcu volutpat, vel tincidunt dui vehicula
-Praesent in quam ante
-Duis in mi eget lectus accumsan pulvinar.$->
+<-$<div id="6" class="post"><b><u>Blog 6</u></b><br>
+LMFAO THIS ACTUALLY WORKED AHAHAHAH</div>$->
 `
     var formattedContent = FormatContent(blogContent)    
     var toLoad = document.getElementsByClassName("blogPart")[0]
