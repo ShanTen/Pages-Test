@@ -1,1 +1,7 @@
-<-$<div id="insert-id" class="post"><b><u>insert-title</u></b><br>insert-content</div>$->
+<-$<div id="insert-id" class="post">
+    <b><u>insert-title</u></b>
+    <br/>
+    <b>insert-date</b>
+    <br/>
+    insert-content
+</div>$->

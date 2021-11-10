@@ -1,14 +1,50 @@
 from os import listdir
 from os.path import isfile, join, getctime
 from datetime import datetime
-import json
+import json as JSON
 
-humanReadable = lambda ct: datetime.fromtimestamp(ct).strftime('%Y-%m-%d %H:%M')
+def getJSON(filePath):
+    with open(filePath, 'r') as f:
+        jsonValue = f.read()
+        return JSON.loads(jsonValue)
 
-dirPath = r"../WriteBlogHere/"
-listOfFiles = [f for f in listdir(dirPath) if isfile(join(dirPath,f))]
-ctimes = [getctime(join(dirPath,f)) for f in listOfFiles]
+def process_post(filePath,title,date):
+    pass
 
+def getBlogContent(filePath):
+    pass
+
+def Main():
+    readFromDirPath = r"../WriteBlogHere/"
+    memoryPath = r"./memory.json"
+
+    fileData = getJSON(memoryPath)
+    lastCT = fileData["LastCT"]
+    postCount = fileData["PostCount"]
+
+    format_ct = lambda ct: datetime.fromtimestamp(ct).strftime('%Y-%m-%d %H:%M')
+
+    listOfFiles = [f for f in listdir(readFromDirPath) if isfile(join(readFromDirPath,f))]
+    ctimes = [getctime(join(readFromDirPath,f)) for f in listOfFiles]
+    formattedCT = [format_ct(t) for t in ctimes]
+
+    #tuples returned by refing a dict
+    couples = [(x,formattedCT[i]) for i,x in enumerate(ctimes)]
+
+    #format of the dict -> {'Blog Title.txt': (CT_Float, formattedCT_String),..}
+    postsDict = dict(zip(listOfFiles,couples))
+
+    for p in postsDict:
+        ct = postsDict[p][0]
+        if ct>lastCT:
+            print(f"Processing {p}...")
+            fp = join(readFromDirPath,p)
+            title = p[:-4]
+            date = postsDict[p][1]
+            process_post(fp,title,date)
+            lastCT=ct
+
+Main()
 
 """
 Load JSON Values

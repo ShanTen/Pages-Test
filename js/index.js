@@ -64,8 +64,7 @@ function main(){
     //trust me I tried to load it from a text file directly, I TRIED SO HARD AND GOT SO FAR
     //IN THE END STACKOVERFLOW TOLD ME TO MAKE A WHOLE SERVER SIDE >:|
     //just collapse this part if you're working on it for your own sanity
-    var blogContent =  ` 
-<-$<div id="1" class="post"><b><u>Blog 1</u></b><br>
+var blogContent =  `<-$<div id="1" class="post"><b><u>Blog 1</u></b><br>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit
 Suspendisse posuere ipsum in odio pharetra, non sodales eros rhoncus
 Proin tempor ante libero, sed aliquam justo hendrerit quis
@@ -140,8 +139,8 @@ Praesent in quam ante
 Duis in mi eget lectus accumsan pulvinar.</div>$->
 
 <-$<div id="6" class="post"><b><u>Blog 6</u></b><br>
-LMFAO THIS ACTUALLY WORKED AHAHAHAH</div>$->
-`
+LMFAO THIS ACTUALLY WORKED AHAHAHAH</div>$->`
+
     var formattedContent = FormatContent(blogContent)    
     var toLoad = document.getElementsByClassName("blogPart")[0]
     for(x of formattedContent){ //change this into a blog posts class and ID it according to title/date 
