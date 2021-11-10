@@ -141,7 +141,7 @@ Duis in mi eget lectus accumsan pulvinar.</div>$->
 <-$<div id="6" class="post"><b><u>Blog 6</u></b><br>
 LMFAO THIS ACTUALLY WORKED AHAHAHAH</div>$->`
 
-    var formattedContent = FormatContent(blogContent)    
+    var formattedContent = FormatContent(blogContent).reverse()  ;   //returns array; we reverse it so that latest post comes first
     var toLoad = document.getElementsByClassName("blogPart")[0]
     for(x of formattedContent){ //change this into a blog posts class and ID it according to title/date 
         toLoad.innerHTML += `<p class = "Loaded">${x}</p><br><br>`;
