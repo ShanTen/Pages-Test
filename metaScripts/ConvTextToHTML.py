@@ -19,7 +19,7 @@ def Main():
     memoryPath = r"./memory.json"
 
     fileData = getJSON(memoryPath)
-    lastCT = fileData["LastCT"]
+    lastCT = fileData["LastCT"] #what is this? OHH Created Time bruh
     postCount = fileData["PostCount"]
 
     format_ct = lambda ct: datetime.fromtimestamp(ct).strftime('%Y-%m-%d %H:%M')
