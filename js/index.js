@@ -62,7 +62,7 @@ class BlogPost{
 function main(){    
     var formattedContent = gimmeContent();
     var toLoad = document.getElementsByClassName("blogPart")[0]
-    for(x of formattedContent){ //change this into a blog posts class and ID it according to title/date 
+    for(x of formattedContent.reverse()){ //change this into a blog posts class and ID it according to title/date 
         toLoad.innerHTML += `<p class = "Loaded">${x}</p><br><br>`;
     }
 }
